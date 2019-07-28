@@ -1,0 +1,16 @@
+﻿@model List<TagHealper.models.News>
+
+@{
+<h3 class="text-center">اخبار</h3>
+    foreach (var item in Model)
+    {
+        <div class="card" style="width:200px">
+            <img class="card-img-top" src="~/Image/@item.ImagePath" alt="Card image">
+            <div class="card-body">
+                <h4 class="card-title" style="font-size:14px">@item.Title</h4>
+                <p class="card-text" style="font-size:11px">@item.Text</p>
+                <a href="#" class="btn btn-primary" style="font-size:12px;padding:3px">ادامه خبر</a>
+            </div>
+        </div>
+    }
+}
